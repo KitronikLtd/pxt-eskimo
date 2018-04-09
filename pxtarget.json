@@ -1,0 +1,83 @@
+{
+    "id": "eskimo",
+    "name": "eskimo",
+    "title": "MakeCode Editor eskimo",
+    "corepkg": "eskimo",
+    "cloud": {
+        "workspace": false,
+        "packages": true
+    },
+    "bundleddirs": [
+        "libs/core"
+    ],
+    "compile": {
+            "isNative": true,
+            "useUF2": true,
+            "hasHex": true,
+            "deployDrives": ".*",
+            "deployFileMarker": "INFO_UF2.TXT",
+            "driveName": "BOOT"
+        },
+    
+    "runtime": {
+      "mathBlocks": true,
+      "loopsBlocks": true,
+      "logicBlocks": true,
+      "variablesBlocks": true,
+      "textBlocks": false,
+      "functionBlocks": false,
+      "listsBlocks": false 
+    },
+    
+"compileService": {
+        "buildEngine": "codal",
+        "codalTarget": {
+            "name": "codal-samd21",
+            "url": "https://github.com/lancaster-university/codal-samd21",
+            "branch": "master",
+            "type": "git"
+        },
+        "codalBinary": "SAMD21",
+        "yottaConfig": {
+            "pxt": {
+                "board": {
+                    "id": "eskimo"
+                }
+            }
+        },
+        "githubCorePackage": "lancaster-university/codal",
+        "gittag": "v0.2.2",
+        "serviceId": "codal2cp"
+    },
+    
+    "appTheme": {
+        "docMenu": [
+            {
+                "name": "About",
+                "path": "/about"
+            },
+            {
+                "name": "Docs",
+                "path": "/docs"
+            }
+        ],
+        "coloredToolbox": false,
+        "monacoToolbox": true,
+        "invertedMenu": false,
+        "showHomeScreen": true,
+        "homeScreenHero": "./static/hero.png",        
+        "blocklyOptions": { 
+            "grid": {
+                "spacing": 45,
+                "length": 7,
+                "colour": "rgba(189, 195, 199, 0.30)",
+                "snap": true
+            }
+        },
+        "simAnimationEnter": "fly right in",
+        "simAnimationExit": "fly right out",
+        "monacoColors": {
+            "editor.background": "#ecf0f1"
+        }
+    }
+}
